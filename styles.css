@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+    cursor: url("Cursors/Ghost.cur"), auto;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+   background-image: url('images/bg.png');
+}
+
+h1{
+    margin: auto;
+    margin-top: -10px;
+    font-family: 'Nosifer', cursive;
+    color: orangered;
+    text-align: center;
+    font-size: 2.5rem;
+    font-stretch: extra-condensed;
+}
+
+.overlay-text{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: orangered;
+    font-family: 'Eater', cursive;
+
+}
+
+.overlay-text-small{
+    font-size: .3em;
+}
+
+.overlay-text.visible{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+        background: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to {
+        background: rgba(0,0,0,0.88);
+        font-size: 6rem;
+    }
+}
+
+.game-info{
+     margin-top: -48px;
+     font-family: 'Eater', cursive;
+     color: orangered;
+     font-size: 1.8rem;
+}
+
+.game-info-container{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 7px;
+    margin: 30px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.card{
+    position: relative;
+    width: 90px;
+    height: 113.5px;
+    margin: 0;
+    padding: 0;
+}
+
+.card:hover {
+    cursor: url("Cursors/Normal.cur"), auto;
+}
+
+.card-face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s infinite;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: transform 500ms ease-in-out ;
+}
+
+.card.matched .fimgcenter{
+    animation: dance 1s linear infinite 500ms;
+}
+.card.matched .imgcenter{
+    animation: dance 1s linear infinite 500ms;
+}
+
+@keyframes dance{
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);  
+    }
+
+}
+
+.card-back{
+    background-color: black;
+    border-color: orange;
+}
+
+.card.visible .card-back{
+    transform: rotateY(-180deg);
+}
+.card.visible .card-front{
+    transform: rotateY(0deg);
+}
+
+.card-front{
+    background-color: palegoldenrod;
+    transform: rotateY(180deg);
+}
+
+.imgborder{
+    position: absolute;
+    width: 89px;
+    height: 114.5px;
+}
+
+
+.imgcenter{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+.fimgcenter{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.card-front .imgcenter{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.card-front .imgborder{
+    transition: transform 0.3s;
+}
+
+.card-back:hover .imgcenter{
+    animation: MoveUpDown 1s linear infinite;
+    position: absolute;
+}
+.card-back:hover {
+    animation: bgcolor 1s infinite ;
+}
+
+@keyframes bgcolor{
+    0%{background-color: rgb(22, 44, 0);}
+    25%{background-color: rgb(80, 0, 0);}
+    50%{background-color: rgb(0, 15, 59);}
+    75%{background-color: rgb(41, 41, 2);}
+    100%{background-color: black;}
+}
+
+@keyframes MoveUpDown {
+
+    0%{top: 35%;}
+    25%{top: 25%;}
+    50%{top: 40%}
+    75%{top: 45%}
+    100%{top:35%}
+
+}
+
+.card-front:hover .imgcenter{
+transform: scale(1.4);
+}
+
+.card-front:hover .imgborder{
+    transform: scale(0.95);
+}

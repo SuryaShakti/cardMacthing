@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="main.js" async></script>
+    <title>Card Matching Game</title>
+
+</head>
+<body>
+    <h1>Match The Cards</h1>
+    <div class="overlay-text visible">
+        <span class="overlay-text-small">flip and match the cards before the time runs out.</span>
+        Click To Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        Game Over
+        <span class="overlay-text-small"> click to restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        Victory
+        <span class="overlay-text-small"> click to restart</span>
+    </div>
+
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time : <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Flips : <span id="flips">0</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/cat.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/cat.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/25496-2-halloween-ghost-clipart.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/25496-2-halloween-ghost-clipart.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/25576-7-halloween-tree-transparent-image.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/25576-7-halloween-tree-transparent-image.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/589deb3b64b351149f22a869.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/589deb3b64b351149f22a869.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/bats.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/bats.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/harryPotter.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/harryPotter.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/castle.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/castle.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/kisspng-spider-cartoon-clip-art-cartoon-hand-painted-red-spider-5a98b4f9a3e8a1.6731429215199572416714.png" class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img src="images/halloween-frame-transparent-10.png" alt="" class="imgborder">
+                <img src="images/11-2-halloween-png-file.png" class="imgcenter" alt="">
+            </div>
+        
+            <div class="card-front card-face">
+                <img src="images/30525-7-halloween-border-hd.png" alt="" class="imgborder">
+                <img src="images/kisspng-spider-cartoon-clip-art-cartoon-hand-painted-red-spider-5a98b4f9a3e8a1.6731429215199572416714.png"
+                    class="imgcenter fimgcenter" alt="">
+            </div>
+        </div>
+    </div>
+
+
+ 
+    
+</body>
+</html>
